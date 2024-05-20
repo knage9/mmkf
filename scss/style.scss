@@ -1,0 +1,11 @@
+@import "_header";
+@import "_main";
+@import "_program";
+
+body{
+    background-color: $black;
+}
+
+a:hover{
+    color: red;
+}

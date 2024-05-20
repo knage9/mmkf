@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="/examples/libs/ui-components/itc-slider/itc-slider.css" rel="stylesheet">
+    <script src="/examples/libs/ui-components/itc-slider/itc-slider.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header_container" id="header">
+            <div class="header_body">
+                <div class="header_burger">
+                    <span></span>
+                </div>
+                <nav class="header_menu">
+                    <ul class="header_list">
+                        <li>
+                            <a href="index.html">расписание</a>
+                        </li>
+                        <div class="gidline"></div>
+                        <li>
+                            <a href="programs.html">Программа фестиваля</a>
+                        </li>
+                        <div class="gidline"></div>
+                        <li>
+                            <a href="#">купить Билет</a>
+                        </li>
+                        <div class="gidline"></div>
+                        <li>
+                            <a href="#">новости</a>
+                        </li>
+                        <div class="gidline"></div>
+                        <li>
+                            <a href="#">команда</a>
+                        </li>
+                        <div class="gidline"></div>
+                        <li>
+                            <a href="#">история фестиваля</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="progress-bar">
+        </div>
+    </header>
+    <div class="line_header"></div>
+    <div class="h1_container">
+        <div class="h1_sub">Главная</div>
+        <div class="h1">расписание показов</div>
+    </div>
+    <div class="date_container">
+        <div class="tabs">
+            <button class="tab-link" onclick="openTab(event, 'Tab1')">23 мая, чт</button>
+            <button class="tab-link" onclick="openTab(event, 'Tab2')">24 мая, пт</button>
+            <button class="tab-link" onclick="openTab(event, 'Tab3')">25 мая, сб</button>
+            <button class="tab-link" onclick="openTab(event, 'Tab4')">26 мая, вс</button>
+            <button class="tab-link" onclick="openTab(event, 'Tab5')">27 мая, пн</button>
+            <button class="tab-link" onclick="openTab(event, 'Tab6')">28 мая, вт</button>
+            <button class="tab-link" onclick="openTab(event, 'Tab7')">29 мая, ср</button>
+          </div>
+          <button id="selectLocationBtn">Выбрать площадку</button>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="location-filter">
+                    <button class="location-btn" data-location="all">Все</button>
+                    <button class="location-btn" data-location="иллюзион">иллюзион</button>
+                    <button class="location-btn" data-location="каро 11 октябрь">каро 11 октябрь</button>
+                    <button class="location-btn" data-location="кинотеатр «поклонка»">кинотеатр «поклонка»</button>
+                    <button class="location-btn" data-location="кинотеатр «художественный»">кинотеатр «художественный»</button>
+                    <button class="location-btn" data-location="москино космос">москино космос</button>
+                    <button class="location-btn" data-location="москино молодежный">москино молодежный</button>
+                    <button class="location-btn" data-location="москино салют">москино салют</button>
+                    <button class="location-btn" data-location="москино факел">москино факел</button>
+                </div>
+            </div>
+            </div>
+          <div id="Tab1" class="tab-content">
+            <div class="all_cards_tab">
+                <div class="tab_contant">
+                    <div class="card_left">
+                        <div class="time">16:10</div>
+                        <div class="addres">
+                            <img src="img/geo.svg" alt="">
+                            <div class="addres_txt">
+                                иллюзион, зал 7
+                            </div>
+                        </div>
+                        <img src="img/1.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="about_txt_1">Серенада трех сердец</div>
+                        <div class="about_txt_2">Design for living</div>
+                        <div class="tags">
+                            <div class="tag">внеконкурсная программа</div>
+                            <div class="tag">Кирилл Разлогов. ФИЛЬМЫ МОЕЙ ЖИЗНИ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab_contant">
+                    <div class="card_left">
+                        <div class="time">17:00</div>
+                        <div class="addres">
+                            <img src="img/geo.svg" alt="">
+                            <div class="addres_txt">
+                                москино факел
+                            </div>
+                        </div>
+                        <img src="img/2.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="about_txt_1">Ты, я, Ленин</div>
+                        <div class="about_txt_2">Sen ben Lenin</div>
+                        <div class="tags">
+                            <div class="tag">внеконкурсная программа</div>
+                            <div class="tag">Кирилл Разлогов. ФИЛЬМЫ МОЕЙ ЖИЗНИ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div id="Tab2" class="tab-content">
+            <div class="all_cards_tab">
+                <div class="tab_contant">
+                    <div class="card_left">
+                        <div class="time">16:10</div>
+                        <div class="addres">
+                            <img src="img/geo.svg" alt="">
+                            <div class="addres_txt">
+                                иллюзион, зал 7
+                            </div>
+                        </div>
+                        <img src="img/1.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="about_txt_1">Серенада трех сердец</div>
+                        <div class="about_txt_2">Design for living</div>
+                        <div class="tags">
+                            <div class="tag">внеконкурсная программа</div>
+                            <div class="tag">Кирилл Разлогов. ФИЛЬМЫ МОЕЙ ЖИЗНИ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab_contant">
+                    <div class="card_left">
+                        <div class="time">17:00</div>
+                        <div class="addres">
+                            <img src="img/geo.svg" alt="">
+                            <div class="addres_txt">
+                                москино факел
+                            </div>
+                        </div>
+                        <img src="img/2.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="about_txt_1">Ты, я, Ленин</div>
+                        <div class="about_txt_2">Sen ben Lenin</div>
+                        <div class="tags">
+                            <div class="tag">внеконкурсная программа</div>
+                            <div class="tag">Кирилл Разлогов. ФИЛЬМЫ МОЕЙ ЖИЗНИ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div id="Tab3" class="tab-content">
+            <div class="all_cards_tab">
+                <div class="tab_contant">
+                    <div class="card_left">
+                        <div class="time">17:10</div>
+                        <div class="addres">
+                            <img src="img/geo.svg" alt="">
+                            <div class="addres_txt">
+                                Кинозал Инженерного корпуса Третьяковской галереи
+                            </div>
+                        </div>
+                        <img src="img/3.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="about_txt_1">Архипелаг</div>
+                        <div class="about_txt_2">Archipelag</div>
+                        <div class="tags">
+                            <div class="tag">внеконкурсная программа</div>
+                            <div class="tag">Кирилл Разлогов. ФИЛЬМЫ МОЕЙ ЖИЗНИ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab_contant">
+                    <div class="card_left">
+                        <div class="time">18:00</div>
+                        <div class="addres">
+                            <img src="img/geo.svg" alt="">
+                            <div class="addres_txt">
+                                Кинозал Инженерного корпуса Третьяковской галереи
+                            </div>
+                        </div>
+                        <img src="img/4.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="about_txt_1">OPEN TALK «СОВРЕМЕННЫЙ КИНЕМАТОГРАФ. ВРЕМЯ ЖЕНЩИН»</div>
+                        <div class="about_txt_2">OPEN TALK "CONTEMPORARY CINEMA. TIME OF WOMEN"</div>
+                        <div class="tags">
+                            <div class="tag">внеконкурсная программа</div>
+                            <div class="tag">Кирилл Разлогов. ФИЛЬМЫ МОЕЙ ЖИЗНИ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div id="Tab4" class="tab-content">
+            <div class="all_cards_tab">
+                <div class="tab_contant">
+                    <div class="card_left">
+                        <div class="time">16:10</div>
+                        <div class="addres">
+                            <img src="img/geo.svg" alt="">
+                            <div class="addres_txt">
+                                иллюзион, зал 7
+                            </div>
+                        </div>
+                        <img src="img/1.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="about_txt_1">Серенада трех сердец</div>
+                        <div class="about_txt_2">Design for living</div>
+                        <div class="tags">
+                            <div class="tag">внеконкурсная программа</div>
+                            <div class="tag">Кирилл Разлогов. ФИЛЬМЫ МОЕЙ ЖИЗНИ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab_contant">
+                    <div class="card_left">
+                        <div class="time">17:00</div>
+                        <div class="addres">
+                            <img src="img/geo.svg" alt="">
+                            <div class="addres_txt">
+                                москино факел
+                            </div>
+                        </div>
+                        <img src="img/2.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="about_txt_1">Ты, я, Ленин</div>
+                        <div class="about_txt_2">Sen ben Lenin</div>
+                        <div class="tags">
+                            <div class="tag">внеконкурсная программа</div>
+                            <div class="tag">Кирилл Разлогов. ФИЛЬМЫ МОЕЙ ЖИЗНИ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div id="Tab5" class="tab-content">
+            <div class="all_cards_tab">
+                <div class="tab_contant">
+                    <div class="card_left">
+                        <div class="time">16:10</div>
+                        <div class="addres">
+                            <img src="img/geo.svg" alt="">
+                            <div class="addres_txt">
+                                иллюзион, зал 7
+                            </div>
+                        </div>
+                        <img src="img/1.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="about_txt_1">Серенада трех сердец</div>
+                        <div class="about_txt_2">Design for living</div>
+                        <div class="tags">
+                            <div class="tag">внеконкурсная программа</div>
+                            <div class="tag">Кирилл Разлогов. ФИЛЬМЫ МОЕЙ ЖИЗНИ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab_contant">
+                    <div class="card_left">
+                        <div class="time">17:00</div>
+                        <div class="addres">
+                            <img src="img/geo.svg" alt="">
+                            <div class="addres_txt">
+                                москино факел
+                            </div>
+                        </div>
+                        <img src="img/2.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="about_txt_1">Ты, я, Ленин</div>
+                        <div class="about_txt_2">Sen ben Lenin</div>
+                        <div class="tags">
+                            <div class="tag">внеконкурсная программа</div>
+                            <div class="tag">Кирилл Разлогов. ФИЛЬМЫ МОЕЙ ЖИЗНИ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div id="Tab6" class="tab-content">
+            <div class="all_cards_tab">
+                <div class="tab_contant">
+                    <div class="card_left">
+                        <div class="time">16:10</div>
+                        <div class="addres">
+                            <img src="img/geo.svg" alt="">
+                            <div class="addres_txt">
+                                иллюзион, зал 7
+                            </div>
+                        </div>
+                        <img src="img/5.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="about_txt_1">Серенада трех сердец</div>
+                        <div class="about_txt_2">Design for living</div>
+                        <div class="tags">
+                            <div class="tag">внеконкурсная программа</div>
+                            <div class="tag">Кирилл Разлогов. ФИЛЬМЫ МОЕЙ ЖИЗНИ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab_contant">
+                    <div class="card_left">
+                        <div class="time">17:00</div>
+                        <div class="addres">
+                            <img src="img/geo.svg" alt="">
+                            <div class="addres_txt">
+                                москино факел
+                            </div>
+                        </div>
+                        <img src="img/6.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="about_txt_1">Ты, я, Ленин</div>
+                        <div class="about_txt_2">Sen ben Lenin</div>
+                        <div class="tags">
+                            <div class="tag">внеконкурсная программа</div>
+                            <div class="tag">Кирилл Разлогов. ФИЛЬМЫ МОЕЙ ЖИЗНИ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div id="Tab7" class="tab-content">
+            <div class="all_cards_tab">
+                <div class="tab_contant">
+                    <div class="card_left">
+                        <div class="time">16:10</div>
+                        <div class="addres">
+                            <img src="img/geo.svg" alt="">
+                            <div class="addres_txt">
+                                иллюзион, зал 7
+                            </div>
+                        </div>
+                        <img src="img/1.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="about_txt_1">Серенада трех сердец</div>
+                        <div class="about_txt_2">Design for living</div>
+                        <div class="tags">
+                            <div class="tag">внеконкурсная программа</div>
+                            <div class="tag">Кирилл Разлогов. ФИЛЬМЫ МОЕЙ ЖИЗНИ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab_contant">
+                    <div class="card_left">
+                        <div class="time">17:00</div>
+                        <div class="addres">
+                            <img src="img/geo.svg" alt="">
+                            <div class="addres_txt">
+                                москино факел
+                            </div>
+                        </div>
+                        <img src="img/2.png" alt="">
+                    </div>
+                    <div class="card_right">
+                        <div class="about_txt_1">Ты, я, Ленин</div>
+                        <div class="about_txt_2">Sen ben Lenin</div>
+                        <div class="tags">
+                            <div class="tag">внеконкурсная программа</div>
+                            <div class="tag">Кирилл Разлогов. ФИЛЬМЫ МОЕЙ ЖИЗНИ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+    
+    <div class="slider">
+        <div class="slider__container" id="sliderContainer">
+            <!-- Фотографии будут добавляться здесь динамически -->
+        </div>
+        <div class="slider__controls">
+            <div class="slider__dots" id="sliderDots">
+                <!-- Точки будут добавляться здесь динамически -->
+            </div>
+            <img src="img/uiw_left.svg" class="slider__nav slider__nav-left" alt="" onclick="nextIndex(-1)">
+            <img src="img/uiw_right.svg" class="slider__nav slider__nav-right" alt="" onclick="nextIndex(1)">
+        </div>
+    </div>
+    
+</body>
+<script src="js/tabs.js"></script>
+<script src="js/burger.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/acardion.js"></script>
+<script src="js/filter.js"></script>
+<script src="js/scroll.js"></script>
+</html>
